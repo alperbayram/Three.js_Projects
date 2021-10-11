@@ -23,10 +23,7 @@
 
 			let camera, scene, renderer,controls;
 
-			let mouseX = 0, mouseY = 0;
 
-			let windowHalfX = window.innerWidth / 2;
-			let windowHalfY = window.innerHeight / 2;
 
 			let object;
 
@@ -126,7 +123,6 @@
 
 
 
-				document.addEventListener( 'mousemove', onDocumentMouseMove );
 
 				//
 
@@ -146,12 +142,7 @@
 
 			}
 
-			function onDocumentMouseMove( event ) {
-
-				mouseX = ( event.clientX - windowHalfX ) / 3;
-				mouseY = ( event.clientY - windowHalfY ) / 3;
-
-			}
+		
 				//
 
 			function animate() {
@@ -163,11 +154,9 @@
 			}
 
 			function render() {
-               //camera.position.x += ( mouseX - camera.position.x ) * .05;
-				//camera.position.y += ( - mouseY - camera.position.y ) * .05;
+
                 
-                //object.rotation.x += (0.2*(Math.PI / 180));
-               // object.rotation.x %=360;
+
 
 
 				camera.lookAt( scene.position );
